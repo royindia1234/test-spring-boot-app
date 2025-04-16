@@ -15,6 +15,7 @@ public class DataAnalysisService {
     }
 
     public int findMax(List<Integer> numbers) {
+
         return numbers.stream()
                 .mapToInt(Integer::intValue)
                 .max()
