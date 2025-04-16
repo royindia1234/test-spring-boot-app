@@ -22,4 +22,14 @@ public class DataAnalysisController {
     public int findMax(@RequestBody List<Integer> numbers) {
         return dataAnalysisService.findMax(numbers);
     }
+
+    @PostMapping("/min")
+    public int findMin(@RequestBody List<Integer> numbers) {
+        return dataAnalysisService.findMin(numbers);
+    }
+
+    @PostMapping("/sum")
+    public int calculateSum(@RequestBody List<Integer> numbers) {
+        return dataAnalysisService.calculateSum(numbers);
+    }
 }
