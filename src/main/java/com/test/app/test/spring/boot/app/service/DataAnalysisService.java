@@ -15,10 +15,22 @@ public class DataAnalysisService {
     }
 
     public int findMax(List<Integer> numbers) {
-
         return numbers.stream()
                 .mapToInt(Integer::intValue)
                 .max()
                 .orElseThrow(() -> new IllegalArgumentException("List is empty"));
+    }
+
+    public int findMin(List<Integer> numbers) {
+        return numbers.stream()
+                .mapToInt(Integer::intValue)
+                .min()
+                .orElseThrow(() -> new IllegalArgumentException("List is empty"));
+    }
+
+    public int calculateSum(List<Integer> numbers) {
+        return numbers.stream()
+                .mapToInt(Integer::intValue)
+                .sum();
     }
 }
